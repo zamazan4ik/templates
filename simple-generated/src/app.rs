@@ -7,6 +7,7 @@ use ratatui::{
     DefaultTerminal, Frame,
 };
 
+/// The main application which holds the state and logic of the application.
 #[derive(Debug, Default)]
 pub struct App {
     /// Is the application running?
@@ -23,7 +24,7 @@ impl App {
     pub fn run(mut self, mut terminal: DefaultTerminal) -> Result<()> {
         self.running = true;
         while self.running {
-            terminal.draw(|frame| self.draw(frame))?;
+            terminal.draw(|frame| self.render(frame))?;
             self.handle_crossterm_events()?;
         }
         Ok(())
@@ -32,9 +33,10 @@ impl App {
     /// Renders the user interface.
     ///
     /// This is where you add new widgets. See the following resources for more information:
+    ///
     /// - <https://docs.rs/ratatui/latest/ratatui/widgets/index.html>
-    /// - <https://github.com/ratatui/ratatui/tree/master/examples>
-    fn draw(&mut self, frame: &mut Frame) {
+    /// - <https://github.com/ratatui/ratatui/tree/main/ratatui-widgets/examples>
+    fn render(&mut self, frame: &mut Frame) {
         let title = Line::from("Ratatui Simple Template")
             .bold()
             .blue()
