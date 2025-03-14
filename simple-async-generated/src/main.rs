@@ -2,10 +2,10 @@ use color_eyre::Result;
 use crossterm::event::{Event, EventStream, KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
 use futures::{FutureExt, StreamExt};
 use ratatui::{
+    DefaultTerminal, Frame,
     style::Stylize,
     text::Line,
     widgets::{Block, Paragraph},
-    DefaultTerminal, Frame,
 };
 
 #[tokio::main]
