@@ -21,20 +21,30 @@ generate-component $CARGO_NAME="your name" $CARGO_EMAIL="author@example.com":
 
 generate-hello-world $CARGO_NAME="your name" $CARGO_EMAIL="author@example.com":
     rm -rv hello-world-generated
-    cargo generate --path ./hello-world --name hello-world-generated
+    cargo generate --path ./hello-world \
+        --name hello-world-generated \
+        --define project-description="An example generated using the hello-world template"
 
 generate-simple $CARGO_NAME="your name" $CARGO_EMAIL="author@example.com":
     rm -rv simple-generated
-    cargo generate --path ./simple --name simple-generated
+    cargo generate --path ./simple \
+        --name simple-generated \
+        --define project-description="An example generated using the simple template"
 
 generate-simple-async $CARGO_NAME="your name" $CARGO_EMAIL="author@example.com":
     rm -rv simple-async-generated
-    cargo generate --path ./simple-async --name simple-async-generated
+    cargo generate --path ./simple-async \
+        --name simple-async-generated \
+        --define project-description="An example generated using the simple-async template"
 
 generate-event-driven $CARGO_NAME="your name" $CARGO_EMAIL="author@example.com":
     rm -rv event-driven-generated
-    cargo generate --path ./event-driven --name event-driven-generated
+    cargo generate --path ./event-driven \
+        --name event-driven-generated \
+        --define project-description="An example generated using the event-driven template"
 
 generate-event-driven-async $CARGO_NAME="your name" $CARGO_EMAIL="author@example.com":
     rm -rv event-driven-async-generated
-    cargo generate --path ./event-driven-async --name event-driven-async-generated
+    cargo generate --path ./event-driven-async \
+        --name event-driven-async-generated \
+        --define project-description="An example generated using the event-driven-async template"

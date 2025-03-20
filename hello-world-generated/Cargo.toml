@@ -1,6 +1,7 @@
 [package]
 name = "hello-world-generated"
 version = "0.1.0"
+description = "An example generated using the hello-world template"
 authors = ["your name <author@example.com>"]
 license = "MIT"
 edition = "2024"
