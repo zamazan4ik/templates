@@ -45,3 +45,10 @@ tracing-subscriber = { version = "0.3.18", features = ["env-filter", "serde"] }
 [build-dependencies]
 anyhow = "1.0.90"
 vergen-gix = { version = "1.0.2", features = ["build", "cargo"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
+
